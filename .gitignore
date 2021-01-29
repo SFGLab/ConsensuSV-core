@@ -1,0 +1,11 @@
+samples/
+temp/
+!/samples/HG00512/*
+charles_pass
+charles_pass_final.vcf
+charles_pass2
+comparison.vcf
+output.vcf
+uniq_comparison.vcf
+*.pyc
+output/
