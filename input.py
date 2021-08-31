@@ -8,6 +8,8 @@ def inputHandling():
     parser.add_argument('-mod', '--model', help='Model used for SV discovery (default default.model).', required=False, default="default.model")
 
     parser.add_argument('-o', '--output', help='Output file prefix.', default="consensuSV_")
+    
+    parser.add_argument('-s', '--samples', help='Samples to include. By default all in the sv_folder. Comma-separated.', required=False, default=None)
 
     parser.add_argument('-m', '--min_overlap', help='File with minimum numbers of SVs in the neighbourhood for the SV to be reported (default min_overlaps).', default="min_overlaps")
 
