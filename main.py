@@ -37,7 +37,11 @@ Y_vector = list()
 samples_folder = args.sv_folder
 folders = [f for f in listdir(samples_folder) if isdir(join(samples_folder, f))]
 
-samples = [f.split('/')[-1] for f in folders]
+if(args.samples):
+    samples = args.samples.split(",")
+else:
+    samples = [f.split('/')[-1] for f in folders]
+
 if not (args.no_preprocess):
     if os.path.exists("temp") and os.path.isdir("temp"):
         shutil.rmtree("temp")
