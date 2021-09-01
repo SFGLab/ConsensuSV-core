@@ -73,7 +73,7 @@ for sample in samples:
     consensusId = 1
 
     if not(args.train): # load model
-        filename = 'pretrained.model'
+        filename = args.model
         loaded_model = pickle.load(open(filename, 'rb'))
 
     resulting_svs = list()
@@ -174,7 +174,7 @@ if (args.train): # learning phase
     error = abs(y_test-y_pred)
     print("Average abs error (testing set of 10%): " + str(numpy.average(error)) + "std: " + str(numpy.std(error)))
 
-    filename = 'pretrained.model'
+    filename = args.model
     pickle.dump(nn, open(filename, 'wb'))
     
     numpy.savetxt("foo.csv", numpy.concatenate((X_test, numpy.vstack((y_test,y_pred)).T), axis=1), delimiter=',', comments="")
