@@ -5,7 +5,7 @@ def inputHandling():
 
     parser.add_argument('-f', '--sv_folder', help='Folder containing folders of samples with raw outputs from SV callers (comma-separated). More information on the structure of the samples folder in readme.', required=True)
 
-    parser.add_argument('-mod', '--model', help='Model used for SV discovery (default default.model).', required=False, default="default.model")
+    parser.add_argument('-mod', '--model', help='Model used for SV discovery (default pretrained.model).', required=False, default="pretrained.model")
 
     parser.add_argument('-o', '--output', help='Output file prefix.', default="consensuSV_")
     
