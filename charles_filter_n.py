@@ -12,7 +12,7 @@ args = parser.parse_args()
 
 
 
-our_callers = set(['lumpy', 'novoBreak', 'GenomeStrip', 'VH', 'wham', 'SVelter', 'Manta', 'Pindel', 'Delly']) # + cnvnator, breakseq, breakdancer
+our_callers = set(['lumpy', 'VH', 'wham', 'Manta', 'Delly']) # + cnvnator, breakseq, breakdancer
 samples = args.samples.split(',')
 outputs = args.outputs.split(',')
 
