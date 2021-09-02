@@ -67,9 +67,8 @@ def preprocessFile(file, sampleName, header):
             fout.write(header)
             fout.writelines(data[1:])
 
-def preprocessFiles(folder, sampleName):
-
-    sv_files = [f for f in listdir(folder) if isfile(join(folder, f))]
+def preprocessFiles(folder, sampleName, callers):
+    sv_files = [f for f in listdir(folder) if (isfile(join(folder, f)) and ".vcf" in f and (callers is None or f.split(".vcf")[0] in callers))]
 
     reheader_all(folder, "temp/"+sampleName+"/", sv_files, sampleName)
 

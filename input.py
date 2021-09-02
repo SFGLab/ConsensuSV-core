@@ -11,6 +11,8 @@ def inputHandling():
     
     parser.add_argument('-s', '--samples', help='Samples to include. By default all in the sv_folder. Comma-separated.', required=False, default=None)
 
+    parser.add_argument('-c', '--callers', help='Callers to include. By default all in the folders. Comma-separated.', required=False, default=None)
+
     parser.add_argument('-m', '--min_overlap', help='File with minimum numbers of SVs in the neighbourhood for the SV to be reported (default min_overlaps).', default="min_overlaps")
 
     parser.add_argument('-t', '--train', help='Creates new model. Requires truth.vcf to be present in all the sv folders. VCF file truth.vcf is preprocessed even if flag --no_preprocess is set. If you train the model, you need to rerun the program to get the consensus.', action="store_true", required=False)

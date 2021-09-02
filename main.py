@@ -42,6 +42,12 @@ if(args.samples):
 else:
     samples = [f.split('/')[-1] for f in folders]
 
+if(args.callers):
+    callers = args.callers.split(",")
+    callers.append("truth")
+else:
+    callers = None
+
 if not (args.no_preprocess):
     if os.path.exists("temp") and os.path.isdir("temp"):
         shutil.rmtree("temp")
@@ -60,14 +66,14 @@ for sample in samples:
 
         print("Preprocessing files of "+sample+"...", end='', flush=True)
 
-        sv_tools = utilities.preprocessFiles(sample_dir, sample)
+        sv_tools = utilities.preprocessFiles(sample_dir, sample, callers)
 
         print(" DONE!", flush=True)
     else:
         if (args.train):
             copyfile(sample_dir+"truth.vcf", sample_temp_dir+"/truth.vcf")
             utilities.preprocessFile(sample+"/truth.vcf", sample, utilities.generate_header(sample))
-        sv_tools = utilities.loadTempFiles(sample)
+        sv_tools = utilities.loadTempFiles(sample, callers)
     percDiff = 0.1
 
     consensusId = 1
