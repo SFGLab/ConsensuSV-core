@@ -9,6 +9,8 @@ def inputHandling():
 
     parser.add_argument('-o', '--output', help='Output file prefix.', default="consensuSV_")
     
+    parser.add_argument('-of', '--output_folder', help='Output folder. Default in the ConsensuSV folder output/', default="output/")
+    
     parser.add_argument('-s', '--samples', help='Samples to include. By default all in the sv_folder. Comma-separated.', required=False, default=None)
 
     parser.add_argument('-c', '--callers', help='Callers to include. By default all in the folders. Comma-separated.', required=False, default=None)
