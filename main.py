@@ -35,6 +35,8 @@ X_vector = list()
 Y_vector = list()
 
 samples_folder = args.sv_folder
+output_folder = args.output_folder
+
 folders = [f for f in listdir(samples_folder) if isdir(join(samples_folder, f))]
 
 if(args.samples):
@@ -151,7 +153,7 @@ for sample in samples:
         utilities.execute_command(cmd)
 
         
-        os.replace("output_sorted.vcf", "output/"+args.output+"_"+sample+".vcf")
+        os.replace("output_sorted.vcf", output_folder+args.output+"_"+sample+".vcf")
     else:
         os.remove("temp/"+sample+"/truth.vcf")
 
