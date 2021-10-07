@@ -21,9 +21,9 @@ Short option | Long option | Description
 -np | --no_preprocess | Flag used for skipping the preprocessing process - all the preprocessed files should be in temp/ folder.
 
 The samples should follow the rule seen in the following figure:
-
-![Sample folder structure](https://github.com/MateuszChilinski/ConsensuSV/blob/master/sample_folder_example.png)
-
+<p align="center">
+<img src="https://github.com/MateuszChilinski/ConsensuSV/blob/master/sample_folder_example.png" width="700" height="700" />
+</p>
 The example command used for the training of the neural network model:
 ```shell
 python main.py -f /home/ConsensuSV/data/ -t
