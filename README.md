@@ -25,6 +25,7 @@ The samples should follow the rule seen in the following figure:
 <img src="https://github.com/MateuszChilinski/ConsensuSV/blob/master/sample_folder_example.png" width="700" height="700" />
 </p>
 The example command used for the training of the neural network model:
+
 ```shell
 python main.py -f /home/ConsensuSV/data/ -t
 ```
