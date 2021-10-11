@@ -61,7 +61,7 @@ Short option | Long option | Description
 
 The samples should follow the rule seen in the following figure:
 <p align="center">
-<img src="https://github.com/MateuszChilinski/ConsensuSV/blob/master/sample_folder_example.png" width="700" height="700" />
+<img src="https://github.com/SFGLab/ConsensuSV-core/blob/main/sample_folder_example.png" width="700" height="700" />
 </p>
 
 ## Implementation details
@@ -69,7 +69,7 @@ The samples should follow the rule seen in the following figure:
 The workflow of the algorithm is presented in the following figure:
 
 <p align="center">
-<img src="https://github.com/MateuszChilinski/ConsensuSV/blob/master/workflow.png" />
+<img src="https://github.com/SFGLab/ConsensuSV-core/blob/main/workflow.png" />
 </p>
 
 ## Comparison to gold-standard set
