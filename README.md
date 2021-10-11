@@ -69,7 +69,7 @@ The samples should follow the rule seen in the following figure:
 The workflow of the algorithm is presented in the following figure:
 
 <p align="center">
-<img src="https://github.com/SFGLab/ConsensuSV-core/blob/main/workflow.png" />
+<img src="https://github.com/SFGLab/ConsensuSV-core/blob/main/workflow.png" width="500"/>
 </p>
 
 ## Comparison to gold-standard set
