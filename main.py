@@ -59,7 +59,7 @@ if not(args.train):
         os.mkdir("output")
 for sample in samples:
     sample_dir = samples_folder+sample+"/"
-    sample_temp_dir = "temp/"+sample
+    sample_temp_dir = "temp/"+sample+"/"
 
     if not (args.no_preprocess):
         if os.path.exists(sample_temp_dir) and os.path.isdir(sample_temp_dir):
@@ -149,11 +149,10 @@ for sample in samples:
             for sv in resulting_svs:
                 fout.write(sv.printVcfLine())
 
-        cmd = "cat output.vcf | awk '$1 ~ /^#/ {print $0;next} {print $0 | "+ "\"sort -k1,1V -k2,2n\"" + r"}' > output_sorted.vcf"
+        cmd = "cat "+sample_temp_dir+"output.vcf | awk '$1 ~ /^#/ {print $0;next} {print $0 | "+ "\"sort -k1,1V -k2,2n\"" + r"}' > "+sample_temp_dir+"output_sorted.vcf"
         utilities.execute_command(cmd)
-
         
-        os.replace("output_sorted.vcf", output_folder+args.output+"_"+sample+".vcf")
+        shutil.move(sample_temp_dir+"output_sorted.vcf", output_folder+args.output+"_"+sample+".vcf")
     else:
         os.remove("temp/"+sample+"/truth.vcf")
 
