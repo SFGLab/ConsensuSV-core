@@ -144,7 +144,7 @@ for sample in samples:
         print(" DONE!", flush=True)
     if not(args.train):
         header = utilities.generate_header(sample)
-        with open("output.vcf", 'w') as fout:
+        with open(sample_temp_dir+"output.vcf", 'w') as fout:
             fout.write(header)
             for sv in resulting_svs:
                 fout.write(sv.printVcfLine())
