@@ -25,16 +25,16 @@ def execute_command(cmd):
 
 def reheader_all(dirFrom, dirTo, sv_files, sampleName):
     # create temp header with sample name
-    copyfile("header", "header_temp")
-    fin = open("header_temp", "wt")
+    copyfile("header", "header_temp"+sampleName)
+    fin = open("header_temp"+sampleName, "wt")
     fin.write(generate_header(sampleName))
     fin.close()
 
     # reheader all files
     for file in sv_files:
-        cmd = r"bcftools reheader -h header_temp -o " + dirTo + file + " " + dirFrom + file
+        cmd = r"bcftools reheader -h header_temp"+sampleName+" -o " + dirTo + file + " " + dirFrom + file
         execute_command(cmd)
-    os.remove("header_temp")
+    os.remove("header_temp"+sampleName)
 
 def preprocessFile(file, sampleName, header):
 
