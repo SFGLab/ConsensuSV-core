@@ -63,8 +63,9 @@ for sample in samples:
 
     if not (args.no_preprocess):
         if os.path.exists(sample_temp_dir) and os.path.isdir(sample_temp_dir):
-            shutil.rmtree(sample_temp_dir)
-        os.mkdir(sample_temp_dir)
+            pass
+        else:
+            os.mkdir(sample_temp_dir)
 
         print("Preprocessing files of "+sample+"...", end='', flush=True)
 
