@@ -51,13 +51,9 @@ else:
     callers = None
 
 if not (args.no_preprocess):
-    if os.path.exists("temp") and os.path.isdir("temp"):
-        pass
-    else:
-        os.mkdir("temp")
+    os.makedirs("temp", exist_ok=True)
 if not(args.train):
-    if not (os.path.exists("output") and os.path.isdir("output")):
-        os.mkdir("output")
+    os.makedirs("output", exist_ok=True)
 for sample in samples:
     sample_dir = samples_folder+sample+"/"
     sample_temp_dir = "temp/"+sample+"/"
