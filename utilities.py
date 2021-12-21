@@ -124,11 +124,11 @@ def createSVTable():
     
     sv_tools = set()
     for sampleName in sv_samples:
-        sv_files = [f for f in listdir("temp/"+sampleName+"/") if isfile(join("temp/"+sampleName+"/", f))]
+        sv_files = [f for f in listdir("temp/"+sampleName+"/") if isfile(join("temp/"+sampleName+"/", f)) and "vcf" in f]
 
         for file in sv_files:
             toolname = file.split(".")[0]
-            if(toolname == "truth"):
+            if(toolname == "truth" or toolname == "output" or "_2" in toolname):
                 continue
             sv_tools.add(toolname)
     return sorted(sv_tools)
