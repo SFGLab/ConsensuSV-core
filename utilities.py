@@ -128,7 +128,7 @@ def createSVTable():
 
         for file in sv_files:
             toolname = file.split(".")[0]
-            if(toolname == "truth" or toolname == "output" or "_2" in toolname):
+            if(toolname == "truth" or toolname == "output" or "_2" in file):
                 continue
             sv_tools.add(toolname)
     return sorted(sv_tools)
