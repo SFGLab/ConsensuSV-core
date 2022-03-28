@@ -1,0 +1,87 @@
+:py:mod:`main`
+==============
+
+.. py:module:: main
+
+
+Module Contents
+---------------
+
+.. py:data:: abspath
+   
+
+   Abs path of the script file.
+
+
+.. py:data:: dname
+   
+
+   Abs path of the directory where the script is in.
+
+
+.. py:data:: args
+   
+
+   Arguments to the script.
+
+
+.. py:data:: min_overlaps
+   
+
+   Dictionary with minimum overlaps for particular types of SVs.
+
+
+.. py:data:: X_vector
+   
+
+   X vector.
+
+
+.. py:data:: Y_vector
+   
+
+   Y vector.
+
+
+.. py:data:: samples_folder
+   
+
+   File where the samples are stored..
+
+
+.. py:data:: output_folder
+   
+
+   Output folder of the algorithm.
+
+
+.. py:data:: folders
+   
+
+   List of folders for each sample.
+
+
+.. py:data:: samples
+   
+
+   List of samples.
+
+
+.. py:data:: callers
+   
+
+   List of SV callers.
+
+
+.. py:data:: sample_dir
+   
+
+   Directory of particular sample.
+
+
+.. py:data:: X_preprocessed_vector
+   
+
+   Preprocessed X vector.
+
+

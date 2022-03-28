@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>utilities &mdash; ConsensuSV-core 1.7 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ConsensuSV-core
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ConsensuSV-core</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">utilities</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/autoapi/utilities/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-utilities">
+<span id="utilities"></span><h1><a class="reference internal" href="#module-utilities" title="utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">utilities</span></code></a><a class="headerlink" href="#module-utilities" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.generate_header" title="utilities.generate_header"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_header</span></code></a>(sample_name)</p></td>
+<td><p>Function for generating the header for output VCF file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utilities.execute_command" title="utilities.execute_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute_command</span></code></a>(cmd)</p></td>
+<td><p>Wrapper for executing CLI commands.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.reheader_all" title="utilities.reheader_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reheader_all</span></code></a>(dirFrom, dirTo, sv_files, sampleName)</p></td>
+<td><p>Function for changing the header to the desired one for all the input VCF files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utilities.preprocessFile" title="utilities.preprocessFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocessFile</span></code></a>(file, sampleName, header)</p></td>
+<td><p>Function for preprocessing one file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.preprocessFiles" title="utilities.preprocessFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocessFiles</span></code></a>(folder, sampleName, callers)</p></td>
+<td><p>Function for preprocessing all the files in a folder.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utilities.loadTempFiles" title="utilities.loadTempFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadTempFiles</span></code></a>(sampleName)</p></td>
+<td><p>Function for loading the temporary files.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.buildFreqDict" title="utilities.buildFreqDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">buildFreqDict</span></code></a>(candidates)</p></td>
+<td><p>Function for building the frequency dictionary of the SV candidates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utilities.findMajority" title="utilities.findMajority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findMajority</span></code></a>(sv, freqDict, candidates)</p></td>
+<td><p>Function for finding the majority of the candidates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.createSVTable" title="utilities.createSVTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createSVTable</span></code></a>()</p></td>
+<td><p>Function for creating a list of SVTools used in all samples.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utilities.preprocess_Y" title="utilities.preprocess_Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocess_Y</span></code></a>(Y_vector)</p></td>
+<td><p>Preprocessing the Y vector for the ML prediction.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.preprocess_X" title="utilities.preprocess_X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocess_X</span></code></a>(X_vector)</p></td>
+<td><p>Function for preprocessing the X vector for the ML prediction.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utilities.markUsedCandidates" title="utilities.markUsedCandidates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">markUsedCandidates</span></code></a>(candidates)</p></td>
+<td><p>Function marks all used Candidates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.generateAlgorithmsList" title="utilities.generateAlgorithmsList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generateAlgorithmsList</span></code></a>(candidates)</p></td>
+<td><p>Creates list of algorithms that support given SV.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#utilities.generateGenotype" title="utilities.generateGenotype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generateGenotype</span></code></a>(candidates)</p></td>
+<td><p>Voting algorithm for generating of the genotype of the SV.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#utilities.debug" title="utilities.debug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">debug</span></code></a></p></td>
+<td><p>Debug level.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt id="utilities.debug">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">debug</code><em class="property"> = 0</em><a class="headerlink" href="#utilities.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Debug level.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.generate_header">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">generate_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sample_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.generate_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for generating the header for output VCF file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sample_name (str): Name of the sample.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: Header for the VCF file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.execute_command">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">execute_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.execute_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for executing CLI commands.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>cmd (str): Command to execute.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.reheader_all">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">reheader_all</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dirFrom</span></em>, <em class="sig-param"><span class="n">dirTo</span></em>, <em class="sig-param"><span class="n">sv_files</span></em>, <em class="sig-param"><span class="n">sampleName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.reheader_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for changing the header to the desired one for all the input VCF files.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.preprocessFile">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">preprocessFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">sampleName</span></em>, <em class="sig-param"><span class="n">header</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.preprocessFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for preprocessing one file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>file (str): Full path to the file.
+sampleName (str): Name of the sample.
+header (str): Header to put into the file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.preprocessFiles">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">preprocessFiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">folder</span></em>, <em class="sig-param"><span class="n">sampleName</span></em>, <em class="sig-param"><span class="n">callers</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.preprocessFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for preprocessing all the files in a folder.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>folder (str): _description_
+sampleName (str): Name of the sample.
+callers (list of str): List of used SV callers.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of SVTool: List with SV tools.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.loadTempFiles">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">loadTempFiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sampleName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.loadTempFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for loading the temporary files.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sampleName (str): Name of the sample.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of SVTool: List with SV tools.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.buildFreqDict">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">buildFreqDict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">candidates</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.buildFreqDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for building the frequency dictionary of the SV candidates.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>candidates (list of SVariant): List of structural variants.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict of {str : int}: Dictionary containing the frequencies of candidates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.findMajority">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">findMajority</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sv</span></em>, <em class="sig-param"><span class="n">freqDict</span></em>, <em class="sig-param"><span class="n">candidates</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.findMajority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for finding the majority of the candidates.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sv (SVariant): Structural variant to find majority for.
+freqDict (str -&gt; int): Frequency dictionary of candidates.
+candidates (list of SVariant): List with all the candidates.</p>
+</dd>
+<dt>Returns:</dt><dd><p>tuple of (bool, SVariant): Tuple containing information whether the majority was found, and first SV candidate of that majority, which will be used for creation of the consensus SV.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.createSVTable">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">createSVTable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utilities.createSVTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for creating a list of SVTools used in all samples.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list of SVTool: List of SVTools.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.preprocess_Y">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">preprocess_Y</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Y_vector</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.preprocess_Y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocessing the Y vector for the ML prediction.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>Y_vector (list of SVariant): List with structural variants.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of int: List with coordinates of the structural variants (pos and end).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.preprocess_X">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">preprocess_X</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X_vector</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.preprocess_X" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for preprocessing the X vector for the ML prediction.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>X_vector (list of SVariant): List with structural variants.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of int: List with coordinates of the candidate structural variants - one from each tool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.markUsedCandidates">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">markUsedCandidates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">candidates</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.markUsedCandidates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function marks all used Candidates.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>candidates (list of SVariant): List with all candidate SV variants.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.generateAlgorithmsList">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">generateAlgorithmsList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">candidates</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.generateAlgorithmsList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates list of algorithms that support given SV.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>candidates (list of SVariant): List with all candidate SV variants.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: Comma-separated list of algorithms from all the candidates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utilities.generateGenotype">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">generateGenotype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">candidates</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.generateGenotype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Voting algorithm for generating of the genotype of the SV.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>candidates (list of SVariant): List with all candidate SV variants.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: Genotype of the variant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Mateusz Chiliński, Dariusz Plewczyński.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

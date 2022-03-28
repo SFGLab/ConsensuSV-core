@@ -1,0 +1,27 @@
+:py:mod:`input`
+===============
+
+.. py:module:: input
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   input.inputHandling
+
+
+
+.. py:function:: inputHandling()
+
+   Parsing the arguments.
+
+   Returns:
+       argparse.ArgumentParser: Argument parser from argparse.
+
+

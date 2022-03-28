@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVTools &mdash; ConsensuSV-core 1.7 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ConsensuSV-core
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ConsensuSV-core</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">SVTools</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/autoapi/SVTools/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-SVTools">
+<span id="svtools"></span><h1><a class="reference internal" href="#module-SVTools" title="SVTools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">SVTools</span></code></a><a class="headerlink" href="#module-SVTools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#SVTools.SVariant" title="SVTools.SVariant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SVariant</span></code></a></p></td>
+<td><p>Class representing structural variant.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#SVTools.SVTool" title="SVTools.SVTool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SVTool</span></code></a></p></td>
+<td><p>Class for storing the SV callers.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="SVTools.SVariant">
+<em class="property">class </em><code class="sig-prename descclassname">SVTools.</code><code class="sig-name descname">SVariant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tool</span></em>, <em class="sig-param"><span class="n">line</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">chrom</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ref</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gt</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">svlen</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">svtype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cipos1</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cipos2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ciend1</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ciend2</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">algorithms</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVariant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing structural variant.</p>
+<dl class="py method">
+<dt id="SVTools.SVariant.printVcfLine">
+<code class="sig-name descname">printVcfLine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVariant.printVcfLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a line for the entry in VCF file for particular SV.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: Line entry for VCF file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SVTools.SVariant.parse_line">
+<code class="sig-name descname">parse_line</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">line</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVariant.parse_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a line from VCF file, and uses that information for the SVariant initialisation.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>line (str): Line from the VCF file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SVTools.SVariant.parse_type">
+<code class="sig-name descname">parse_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">svtype</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVariant.parse_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses type of the SV.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>svtype (str): Type from the INFO field.</p>
+</dd>
+<dt>Returns:</dt><dd><p>_type_: Uniform type of SV.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SVTools.SVariant.print_sv">
+<code class="sig-name descname">print_sv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVariant.print_sv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the SV in the console. Used mostly for debugging.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SVTools.SVariant.checkOverlap">
+<code class="sig-name descname">checkOverlap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">sv2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVariant.checkOverlap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks overlap between SVariants.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sv2 (SVariant): Variant to overlap.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: Information whether the variants overlap or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="SVTools.SVTool">
+<em class="property">class </em><code class="sig-prename descclassname">SVTools.</code><code class="sig-name descname">SVTool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for storing the SV callers.</p>
+<dl class="py attribute">
+<dt id="SVTools.SVTool.max_conf">
+<code class="sig-name descname">max_conf</code><em class="property"> = 200</em><a class="headerlink" href="#SVTools.SVTool.max_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum confidence interval.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SVTools.SVTool.parse_file">
+<code class="sig-name descname">parse_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#SVTools.SVTool.parse_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for parsing the VCF file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Name of the VCF file for particular tool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Mateusz Chiliński, Dariusz Plewczyński.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

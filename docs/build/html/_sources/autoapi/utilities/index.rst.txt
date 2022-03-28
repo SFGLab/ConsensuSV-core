@@ -1,0 +1,188 @@
+:py:mod:`utilities`
+===================
+
+.. py:module:: utilities
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   utilities.generate_header
+   utilities.execute_command
+   utilities.reheader_all
+   utilities.preprocessFile
+   utilities.preprocessFiles
+   utilities.loadTempFiles
+   utilities.buildFreqDict
+   utilities.findMajority
+   utilities.createSVTable
+   utilities.preprocess_Y
+   utilities.preprocess_X
+   utilities.markUsedCandidates
+   utilities.generateAlgorithmsList
+   utilities.generateGenotype
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   utilities.debug
+
+
+.. py:data:: debug
+   :annotation: = 0
+
+   Debug level.
+
+
+.. py:function:: generate_header(sample_name)
+
+   Function for generating the header for output VCF file.
+
+   Args:
+       sample_name (str): Name of the sample.
+
+   Returns:
+       str: Header for the VCF file.
+
+
+.. py:function:: execute_command(cmd)
+
+   Wrapper for executing CLI commands.
+
+   Args:
+       cmd (str): Command to execute.
+
+
+.. py:function:: reheader_all(dirFrom, dirTo, sv_files, sampleName)
+
+   Function for changing the header to the desired one for all the input VCF files.
+
+
+.. py:function:: preprocessFile(file, sampleName, header)
+
+   Function for preprocessing one file.
+
+   Args:
+       file (str): Full path to the file.
+       sampleName (str): Name of the sample.
+       header (str): Header to put into the file.
+
+
+.. py:function:: preprocessFiles(folder, sampleName, callers)
+
+   Function for preprocessing all the files in a folder.
+
+   Args:
+       folder (str): _description_
+       sampleName (str): Name of the sample.
+       callers (list of str): List of used SV callers.
+
+   Returns:
+       list of SVTool: List with SV tools.
+
+
+.. py:function:: loadTempFiles(sampleName)
+
+   Function for loading the temporary files.
+
+   Args:
+       sampleName (str): Name of the sample.
+
+   Returns:
+       list of SVTool: List with SV tools.
+
+
+.. py:function:: buildFreqDict(candidates)
+
+   Function for building the frequency dictionary of the SV candidates.
+
+   Args:
+       candidates (list of SVariant): List of structural variants.
+
+   Returns:
+       dict of {str : int}: Dictionary containing the frequencies of candidates.
+
+
+.. py:function:: findMajority(sv, freqDict, candidates)
+
+   Function for finding the majority of the candidates.
+
+   Args:
+       sv (SVariant): Structural variant to find majority for.
+       freqDict (str -> int): Frequency dictionary of candidates.
+       candidates (list of SVariant): List with all the candidates.
+
+   Returns:
+       tuple of (bool, SVariant): Tuple containing information whether the majority was found, and first SV candidate of that majority, which will be used for creation of the consensus SV.
+
+
+.. py:function:: createSVTable()
+
+   Function for creating a list of SVTools used in all samples.
+
+   Returns:
+       list of SVTool: List of SVTools.
+
+
+.. py:function:: preprocess_Y(Y_vector)
+
+   Preprocessing the Y vector for the ML prediction.
+
+   Args:
+       Y_vector (list of SVariant): List with structural variants.
+
+   Returns:
+       list of int: List with coordinates of the structural variants (pos and end).
+
+
+.. py:function:: preprocess_X(X_vector)
+
+   Function for preprocessing the X vector for the ML prediction.
+
+   Args:
+       X_vector (list of SVariant): List with structural variants.
+
+   Returns:
+       list of int: List with coordinates of the candidate structural variants - one from each tool.
+
+
+.. py:function:: markUsedCandidates(candidates)
+
+   Function marks all used Candidates.
+
+   Args:
+       candidates (list of SVariant): List with all candidate SV variants.
+
+
+.. py:function:: generateAlgorithmsList(candidates)
+
+   Creates list of algorithms that support given SV.
+
+   Args:
+       candidates (list of SVariant): List with all candidate SV variants.
+
+   Returns:
+       str: Comma-separated list of algorithms from all the candidates.
+
+
+.. py:function:: generateGenotype(candidates)
+
+   Voting algorithm for generating of the genotype of the SV.
+
+   Args:
+       candidates (list of SVariant): List with all candidate SV variants.
+
+   Returns:
+       str: Genotype of the variant.
+
+

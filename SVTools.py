@@ -1,4 +1,5 @@
 class SVariant:
+    """Class representing structural variant."""
     def __init__(self, tool, line=None, chrom=None, pos=None, id=None, ref=None, end=None, gt=None, svlen=None, svtype=None, cipos1=None, cipos2=None, ciend1=None, ciend2=None, algorithms=None):
         self.tool = tool
         if(line is not None):
@@ -19,6 +20,11 @@ class SVariant:
             self.used = False
             self.algorithms = algorithms
     def printVcfLine(self):
+        """Creates a line for the entry in VCF file for particular SV.
+
+        Returns:
+            str: Line entry for VCF file.
+        """
         sv_len = self.svlen
         end = self.end
         if(self.svtype == "INS" or self.svtype == "DUP"):
@@ -28,6 +34,11 @@ class SVariant:
         return '\t'.join((self.chrom, str(self.pos), self.id, self.ref, "<"+self.svtype+">",
                  ".", "PASS", "END="+str(end)+";SVLEN="+str(sv_len)+";SVTYPE="+self.svtype+";ALGORITHM="+self.algorithms+";CIPOS="+str(self.cipos1)+","+str(self.cipos2)+";CIEND="+str(self.ciend1)+","+str(self.ciend2), "GT", self.gt, "\n"))
     def parse_line(self, line):
+        """Parses a line from VCF file, and uses that information for the SVariant initialisation.
+
+        Args:
+            line (str): Line from the VCF file.
+        """
         values = line.split("\t")
         self.chrom = values[0]
         self.pos = int(values[1])
@@ -64,6 +75,14 @@ class SVariant:
 
         self.used = False
     def parse_type(self, svtype):
+        """Parses type of the SV.
+
+        Args:
+            svtype (str): Type from the INFO field.
+
+        Returns:
+            _type_: Uniform type of SV.
+        """
         if "del" in svtype.casefold():
             return "DEL"
         if "inv" in svtype.casefold():
@@ -78,8 +97,17 @@ class SVariant:
             return "CNV"
         return "UNK"
     def print_sv(self):
+        """Print the SV in the console. Used mostly for debugging."""
         print(self.svtype + ": " + self.chrom + " " + str(self.pos) + "(" + str(self.cipos1) +", " + str(self.cipos2) + ")" + " - " + str(self.end) + "(" + str(self.cipos1) +", " + str(self.cipos2) + ")" + " LEN: " + str(self.svlen) + " GT: " + self.gt)
     def checkOverlap(self, sv2):
+        """Checks overlap between SVariants.
+
+        Args:
+            sv2 (SVariant): Variant to overlap.
+
+        Returns:
+            bool: Information whether the variants overlap or not.
+        """
         if(self.chrom != sv2.chrom):
             return False
         # bear in mind that cipos first coord is negative, hence just addition (example cipos=-10,10)
@@ -104,11 +132,18 @@ class SVariant:
         return False
 
 class SVTool:
+    """Class for storing the SV callers."""
     max_conf = 200 # max confidence interval length
+    """Maximum confidence interval."""
     def __init__(self, filename):
         self.tool = filename.split("/")[-1].split(".")[0]
         self.parse_file(filename)
     def parse_file(self, filename):
+        """Function for parsing the VCF file.
+
+        Args:
+            filename (str): Name of the VCF file for particular tool.
+        """
         self.sv_list = list()
         with open(filename) as file:
             for line in file:

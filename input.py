@@ -1,6 +1,11 @@
 import argparse
 
 def inputHandling():
+    """Parsing the arguments.
+
+    Returns:
+        argparse.ArgumentParser: Argument parser from argparse.
+    """
     parser = argparse.ArgumentParser(description='Gets the SV consensus.')
 
     parser.add_argument('-f', '--sv_folder', help='Folder containing folders of samples with raw outputs from SV callers (comma-separated). More information on the structure of the samples folder in readme.', required=True)

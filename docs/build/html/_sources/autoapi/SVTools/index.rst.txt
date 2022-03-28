@@ -1,0 +1,87 @@
+:py:mod:`SVTools`
+=================
+
+.. py:module:: SVTools
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   SVTools.SVariant
+   SVTools.SVTool
+
+
+
+
+.. py:class:: SVariant(tool, line=None, chrom=None, pos=None, id=None, ref=None, end=None, gt=None, svlen=None, svtype=None, cipos1=None, cipos2=None, ciend1=None, ciend2=None, algorithms=None)
+
+   Class representing structural variant.
+
+   .. py:method:: printVcfLine(self)
+
+      Creates a line for the entry in VCF file for particular SV.
+
+      Returns:
+          str: Line entry for VCF file.
+
+
+   .. py:method:: parse_line(self, line)
+
+      Parses a line from VCF file, and uses that information for the SVariant initialisation.
+
+      Args:
+          line (str): Line from the VCF file.
+
+
+   .. py:method:: parse_type(self, svtype)
+
+      Parses type of the SV.
+
+      Args:
+          svtype (str): Type from the INFO field.
+
+      Returns:
+          _type_: Uniform type of SV.
+
+
+   .. py:method:: print_sv(self)
+
+      Print the SV in the console. Used mostly for debugging.
+
+
+   .. py:method:: checkOverlap(self, sv2)
+
+      Checks overlap between SVariants.
+
+      Args:
+          sv2 (SVariant): Variant to overlap.
+
+      Returns:
+          bool: Information whether the variants overlap or not.
+
+
+
+.. py:class:: SVTool(filename)
+
+   Class for storing the SV callers.
+
+   .. py:attribute:: max_conf
+      :annotation: = 200
+
+      Maximum confidence interval.
+
+
+   .. py:method:: parse_file(self, filename)
+
+      Function for parsing the VCF file.
+
+      Args:
+          filename (str): Name of the VCF file for particular tool.
+
+
+

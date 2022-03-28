@@ -1,0 +1,56 @@
+:py:mod:`charles_filter_n`
+==========================
+
+.. py:module:: charles_filter_n
+
+.. autoapi-nested-parse::
+
+   Script for generating accuracy metrics between the gold set and the SVs created by ConsensuSV.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: parser
+   
+
+   Parser for the arguments to the script.
+
+
+.. py:data:: args
+   
+
+   Arguments to the script.
+
+
+.. py:data:: our_callers
+   
+
+   Callers used in gold set & our tool (intersection).
+
+
+.. py:data:: samples
+   
+
+   Samples to compare.
+
+
+.. py:data:: outputs
+   
+
+   Output files from ConsensuSV.
+
+
+.. py:data:: i
+   :annotation: = 0
+
+   Iterator
+
+
+.. py:data:: full_text
+   :annotation: = 
+
+   Full text from gold set.
+
+

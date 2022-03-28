@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charles_filter_n &mdash; ConsensuSV-core 1.7 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ConsensuSV-core
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ConsensuSV-core</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">charles_filter_n</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/autoapi/charles_filter_n/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-charles_filter_n">
+<span id="charles-filter-n"></span><h1><a class="reference internal" href="#module-charles_filter_n" title="charles_filter_n"><code class="xref py py-mod docutils literal notranslate"><span class="pre">charles_filter_n</span></code></a><a class="headerlink" href="#module-charles_filter_n" title="Permalink to this headline">¶</a></h1>
+<p>Script for generating accuracy metrics between the gold set and the SVs created by ConsensuSV.</p>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="py data">
+<dt id="charles_filter_n.parser">
+<code class="sig-prename descclassname">charles_filter_n.</code><code class="sig-name descname">parser</code><a class="headerlink" href="#charles_filter_n.parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parser for the arguments to the script.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="charles_filter_n.args">
+<code class="sig-prename descclassname">charles_filter_n.</code><code class="sig-name descname">args</code><a class="headerlink" href="#charles_filter_n.args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments to the script.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="charles_filter_n.our_callers">
+<code class="sig-prename descclassname">charles_filter_n.</code><code class="sig-name descname">our_callers</code><a class="headerlink" href="#charles_filter_n.our_callers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callers used in gold set &amp; our tool (intersection).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="charles_filter_n.samples">
+<code class="sig-prename descclassname">charles_filter_n.</code><code class="sig-name descname">samples</code><a class="headerlink" href="#charles_filter_n.samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Samples to compare.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="charles_filter_n.outputs">
+<code class="sig-prename descclassname">charles_filter_n.</code><code class="sig-name descname">outputs</code><a class="headerlink" href="#charles_filter_n.outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output files from ConsensuSV.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="charles_filter_n.i">
+<code class="sig-prename descclassname">charles_filter_n.</code><code class="sig-name descname">i</code><em class="property"> = 0</em><a class="headerlink" href="#charles_filter_n.i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterator</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="charles_filter_n.full_text">
+<code class="sig-prename descclassname">charles_filter_n.</code><code class="sig-name descname">full_text</code><em class="property"> =</em><a class="headerlink" href="#charles_filter_n.full_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full text from gold set.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Mateusz Chiliński, Dariusz Plewczyński.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

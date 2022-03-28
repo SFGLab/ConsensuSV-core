@@ -18,34 +18,45 @@ from os import listdir
 import re
 
 abspath = os.path.abspath(__file__)
+"""Abs path of the script file."""
 dname = os.path.dirname(abspath)
+"""Abs path of the directory where the script is in."""
 os.chdir(dname)
 
 args = inputHandling()
+"""Arguments to the script."""
 
-min_overlap = args.min_overlap
-with open(min_overlap) as fh:
+
+with open(args.min_overlap) as fh:
     min_overlaps = dict(re.findall(r'(\S+)\s+(.+)', fh.read()))
+    """Dictionary with minimum overlaps for particular types of SVs."""
 for key, value in min_overlaps.items():
     min_overlaps[key] = int(value)
 # preprocessing of the files
 # problems with no svlen?
 
 X_vector = list()
+"""X vector."""
 Y_vector = list()
+"""Y vector."""
 
 samples_folder = args.sv_folder
+"""File where the samples are stored.."""
 output_folder = args.output_folder
+"""Output folder of the algorithm."""
 
 folders = [f for f in listdir(samples_folder) if isdir(join(samples_folder, f))]
+"""List of folders for each sample."""
 
 if(args.samples):
     samples = args.samples.split(",")
+    """List of samples."""
 else:
     samples = [f.split('/')[-1] for f in folders]
 
 if(args.callers):
     callers = args.callers.split(",")
+    """List of SV callers."""
     callers.append("truth")
 else:
     callers = None
@@ -56,6 +67,7 @@ if not(args.train):
     os.makedirs("output", exist_ok=True)
 for sample in samples:
     sample_dir = samples_folder+sample+"/"
+    """Directory of particular sample."""
     sample_temp_dir = "temp/"+sample+"/"
 
     if not (args.no_preprocess):
@@ -157,7 +169,9 @@ if (args.train): # learning phase
     print("Preparing sets...", end='', flush=True)
 
     X_preprocessed_vector = utilities.preprocess_X(X_vector)
+    """Preprocessed X vector."""
     Y_preprocessed_vector = utilities.preprocess_Y(Y_vector)
+    """Preprocessed Y vector."""
 
     print(" DONE!", flush=True)
 
