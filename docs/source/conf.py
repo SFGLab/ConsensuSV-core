@@ -22,7 +22,7 @@ copyright = '2022, Mateusz Chiliński, Dariusz Plewczyński'
 author = 'Mateusz Chiliński, Dariusz Plewczyński'
 
 # The full version, including alpha/beta/rc tags
-release = '1.8'
+release = '1.9'
 
 
 # -- General configuration ---------------------------------------------------

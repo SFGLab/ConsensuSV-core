@@ -23,7 +23,7 @@ Module Contents
    
 
 .. py:data:: release
-   :annotation: = 1.8
+   :annotation: = 1.9
 
    
 
