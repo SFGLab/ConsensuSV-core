@@ -67,6 +67,15 @@ class SVariant:
         cipos = cipos.split(",")
         ciend = ciend.split(",")
 
+        if(cipos[0] == "."):
+            cipos[0] = "-10"
+        if(cipos[1] == "."):
+            cipos[1] = "10"
+        if(ciend[0] == "."):
+            ciend[0] = "-10"
+        if(ciend[1] == "."):
+            ciend[1] = "10"
+            
         self.cipos1 = int(cipos[0])
         self.cipos2 = int(cipos[1])
 
