@@ -2,9 +2,5 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "ConsensuSV-core"
 authors:
-  - family-names: "Chiliński"
-  given-names: "Mateusz"
-  orcid: "https://orcid.org/0000-0001-6641-8504"
-  - family-names: "Plewczynski"
-  given-names: "Dariusz"
-  orcid: "https://orcid.org/0000-0002-3840-7610"
+  - family-names: Chiliński
+  given-names: Mateusz
