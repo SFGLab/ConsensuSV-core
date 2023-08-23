@@ -19,9 +19,7 @@ Important: for the completly automatised fastq-to-vcf (8 SV callers + SNP / Inde
 
 ## Citation
 
-If you use ConsensuSV in your research, we kidnly as you to cite the following publication:
-
-The citation will be updated upon publication.
+If you use ConsensuSV in your research, we kindly ask you to cite the following publication:
 
 ```
 @article{Chilinski_ConsensuSVfrom_the_whole-genome_2022,
